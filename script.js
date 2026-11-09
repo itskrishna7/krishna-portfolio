@@ -18,8 +18,8 @@ let lastFocusedElement = null;
 const portfolioData = {
   person: {
     name: "Krishna Prasad Kurmi",
-    email: "krishnaprasadkurmi99@gmail.com",
-    github: "krishnaprasadkurmi99-jpg",
+    email: "itsmekrishna077@gmail.com",
+    github: "itskrishna7",
     linkedin: "krishnaprasadkurmi7",
     leetcode: "kurmikrishna7"
   },
@@ -547,5 +547,5 @@ emailAppButton?.addEventListener("click", () => {
   const subject = document.querySelector("#contact-subject")?.value.trim() ?? "";
   const message = document.querySelector("#contact-message")?.value.trim() ?? "";
   const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
-  window.location.href = `mailto:krishnaprasadkurmi99@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = `mailto:itsmekrishna077@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });

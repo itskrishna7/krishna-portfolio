@@ -49,7 +49,7 @@ The configured Worker URL is [krishna-portfolio.krishnaprasadkurmi99.workers.dev
 
 ## Repository
 
-[GitHub repository](https://github.com/krishnaprasadkurmi99-jpg/krishna-portfolio)
+[GitHub repository](https://github.com/itskrishna7/krishna-portfolio)
 
 ## Contact Form
 
