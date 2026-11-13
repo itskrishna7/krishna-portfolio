@@ -47,6 +47,10 @@ Before the first deployment:
 
 The configured Worker URL is [krishna-portfolio.krishnaprasadkurmi99.workers.dev](https://krishna-portfolio.krishnaprasadkurmi99.workers.dev).
 
+## Security Hardening
+
+The root `_headers` file applies the site Content Security Policy and baseline browser security headers when deployed as static assets. GitHub Actions in the deployment workflow are pinned to immutable commit SHAs and retain version comments for maintenance updates.
+
 ## Repository
 
 [GitHub repository](https://github.com/itskrishna7/krishna-portfolio)
