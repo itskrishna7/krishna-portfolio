@@ -15,6 +15,7 @@ const backToTop = document.querySelector("#back-to-top");
 const doorLinks = document.querySelectorAll(".portfolio-door");
 const modalFocusableSelector = "button:not([disabled]), a[href], input:not([disabled]), textarea:not([disabled]), select:not([disabled])";
 let lastFocusedElement = null;
+let doorNavigationTimer = null;
 
 const portfolioData = {
   person: {
@@ -418,13 +419,27 @@ navLinks?.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", closeMobileNavigation);
 });
 
+const resetDoorNavigation = () => {
+  if (doorNavigationTimer !== null) {
+    window.clearTimeout(doorNavigationTimer);
+    doorNavigationTimer = null;
+  }
+  doorLinks.forEach((link) => link.classList.remove("is-opening"));
+};
+
+window.addEventListener("pageshow", resetDoorNavigation);
+resetDoorNavigation();
+
 doorLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
     if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     event.preventDefault();
-    if (link.classList.contains("is-opening")) return;
+    if ([...doorLinks].some((door) => door.classList.contains("is-opening"))) return;
     link.classList.add("is-opening");
-    window.setTimeout(() => window.location.assign(link.href), 720);
+    doorNavigationTimer = window.setTimeout(() => {
+      doorNavigationTimer = null;
+      window.location.assign(link.href);
+    }, 720);
   });
 });
 
