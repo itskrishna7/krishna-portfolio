@@ -1,2 +1,10 @@
 .wrangler/
 .vscode/
+*.gitignore
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+*.log
+*.bak
+*.tmp

@@ -1,3 +1,16 @@
 ﻿.git/
 .wrangler/
 node_modules/
+.github/
+.vscode/
+.gitignore
+*.gitignore
+wrangler.jsonc
+README.md
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+*.log
+*.bak
+*.tmp
