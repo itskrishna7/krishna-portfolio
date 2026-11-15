@@ -492,10 +492,10 @@ if (copyrightYear) copyrightYear.textContent = String(new Date().getFullYear());
 document.querySelector("#print-resume")?.addEventListener("click", () => window.print());
 
 const contactFields = [
-  { input: "contact-name", error: "contact-name-error", message: "Please enter your name." },
-  { input: "contact-email", error: "contact-email-error", message: "Please enter a valid email address." },
-  { input: "contact-subject", error: "contact-subject-error", message: "Please enter a subject." },
-  { input: "contact-message", error: "contact-message-error", message: "Please enter a message." }
+  { input: "contact-name", error: "contact-name-error", maxLength: 120, message: "Please enter your name." },
+  { input: "contact-email", error: "contact-email-error", maxLength: 254, message: "Please enter a valid email address." },
+  { input: "contact-subject", error: "contact-subject-error", maxLength: 160, message: "Please enter a subject." },
+  { input: "contact-message", error: "contact-message-error", maxLength: 5000, message: "Please enter a message." }
 ];
 
 const validateContactField = (field) => {
@@ -506,6 +506,7 @@ const validateContactField = (field) => {
   let message = "";
   if (!input.value.trim()) message = field.message;
   else if (input.type === "email" && !input.validity.valid) message = field.message;
+  else if (input.value.length > field.maxLength) message = `Please keep this under ${field.maxLength} characters.`;
   error.textContent = message;
   wrapper.classList.toggle("has-error", Boolean(message));
   input.setAttribute("aria-invalid", String(Boolean(message)));

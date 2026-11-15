@@ -49,7 +49,7 @@ The configured Worker URL is [krishna-portfolio.krishnaprasadkurmi99.workers.dev
 
 ## Security Hardening
 
-The root `_headers` file applies the site Content Security Policy and baseline browser security headers when deployed as static assets. GitHub Actions in the deployment workflow are pinned to immutable commit SHAs and retain version comments for maintenance updates.
+The root `_headers` file applies the site Content Security Policy, HSTS, clickjacking protection, and baseline browser security headers when deployed as static assets. The contact form uses a Formspree honeypot and bounded field lengths as client-side abuse controls; provider-side spam protection and rate limiting should also be configured in Formspree or Cloudflare. GitHub Actions in the deployment workflow are pinned to immutable commit SHAs and retain version comments for maintenance updates. The local `.wrangler/` cache is excluded from version control.
 
 ## Repository
 

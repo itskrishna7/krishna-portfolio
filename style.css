@@ -1381,6 +1381,14 @@ h1, h2, h3, p { text-wrap: pretty; }
   border-radius: 50%;
   transform-style: preserve-3d;
 }
+.form-honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
 .hero-ring__outer {
   background:
     conic-gradient(from 205deg, #1a1b1b 0deg, #d6d9d4 24deg, #676d6e 49deg, #191b1d 86deg, #e0d1aa 137deg, #44494c 188deg, #0d0e0f 230deg, #bec4c0 278deg, #303437 324deg, #1a1b1b 360deg);
