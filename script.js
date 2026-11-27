@@ -209,6 +209,28 @@ const projects = [
     screenshots: [{ src: "project-images/campusly-student-management.png", alt: "Campusly student-management dashboard showing student, course, attendance, and fee overview cards." }]
   },
   {
+    id: "studentmate",
+    title: "StudentMate — Offline-First Academic Planner",
+    categoryLabel: "ACADEMIC PLANNING & STUDENT PRODUCTIVITY",
+    categories: ["web"],
+    description: "A responsive academic planner for timetables, attendance, assessments, marking schemes, and semester performance, with offline-first browser storage and backup support.",
+    problem: "Students often need separate tools to manage schedules, attendance, assessments, and grades, while grading rules vary between subjects and institutions.",
+    technologies: ["React", "TypeScript", "Vite", "Dexie", "IndexedDB", "Recharts", "PDF.js", "Tesseract.js"],
+    features: ["Organize classes, academic events, holidays, and deadlines in a timetable and calendar.", "Record attendance, review summaries, and see how many classes are needed to reach an attendance target.", "Create assessments with custom categories, maximum marks, dates, and results; configure total, average, best-of-N, or weighted marking per subject.", "Set component weightages, pass marks, and grade boundaries, then track semester results, CGPA, predictions, and target scenarios.", "Extract timetable and calendar details from PDFs or images, review them, and import when ready.", "Use the responsive dashboard in light or dark themes; export or restore locally stored records."],
+    contribution: ["Built an academic workspace bringing timetable, calendar, attendance, assessments, and performance tracking together.", "Added per-subject marking scheme configuration and semester result, CGPA, prediction, and target scenario views.", "Implemented document extraction with a review step and browser-local data with backup and restore support."],
+    context: "StudentMate stores records locally in the browser and works offline; data does not automatically sync between devices.",
+    status: "Offline-first",
+    github: "",
+    demo: "",
+    visual: "studentmate",
+    featured: true,
+    screenshots: [
+      { src: "project-images/studentmate-dashboard.png", alt: "StudentMate dashboard with academic workspace setup and semester performance overview." },
+      { src: "project-images/studentmate-attendance.png", alt: "StudentMate attendance page with date selection and controls for preparing sessions and recording attendance." },
+      { src: "project-images/studentmate-performance.png", alt: "StudentMate academic performance page showing CGPA, academic progress, and semester settings." }
+    ]
+  },
+  {
     id: "elevix",
     title: "Elevix — Resume Analyzer & Career Intelligence",
     categoryLabel: "RESUME ANALYSIS & CAREER PLANNING",
