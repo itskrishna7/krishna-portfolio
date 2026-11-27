@@ -141,6 +141,28 @@ const renderAchievements = () => {
 // Edit this collection when project details, links, or status changes.
 const projects = [
   {
+    id: "mediverse",
+    title: "MediVerse — Hospital Management System",
+    categoryLabel: "HOSPITAL OPERATIONS & PATIENT CARE",
+    categories: ["web", "backend"],
+    description: "A full-stack hospital operations platform that brings patient care and administrative workflows together, with role-aware workspaces, a patient portal, and operational analytics.",
+    problem: "Hospitals coordinate clinical care and administrative work across many teams. MediVerse brings those workflows into one application while protecting sensitive actions with role-based access.",
+    technologies: ["React", "TypeScript", "Vite", "Node.js", "REST API", "Prisma", "PostgreSQL", "Neon"],
+    features: ["Provide role-based access for administrators, clinicians, nurses, receptionists, pharmacy, laboratory, billing, and patient users.", "Manage patient records, appointments, admissions and discharge checklists, clinical documentation, prescriptions, nursing tasks, emergency triage, and laboratory workflows.", "Offer a patient portal for appointment requests, care-journey information, results, billing details, and controlled family access.", "Support billing, insurance, radiology, operating theatre, blood bank, ambulance, equipment, and housekeeping workflows.", "Show hospital activity, live operational metrics, alerts, explainable forecasts, briefings, configurable notifications, and hypothetical simulations.", "Export FHIR R4 data through authorized, audit-logged workflows; support MFA, session handling, light and dark themes, responsive navigation, and keyboard-accessible command search."],
+    contribution: ["Built a role-aware hospital management experience spanning clinical care, hospital operations, and patient-facing workflows.", "Connected a React and TypeScript frontend to a Node.js REST API backed by Prisma and PostgreSQL on Neon.", "Added operational analytics, patient portal flows, and authorization- and audit-aware workflows."],
+    context: "The supplied dashboard screenshot shows the backend unavailable in that environment. Database integration tests, migration recovery, backup/restore, and performance verification remain pending or blocked until documented results are available. No production deployment or ABDM certification is claimed.",
+    status: "Backend pending",
+    github: "",
+    demo: "",
+    visual: "mediverse",
+    featured: true,
+    screenshots: [
+      { src: "project-images/mediverse-login.png", alt: "MediVerse secure hospital workspace sign-in page." },
+      { src: "project-images/mediverse-dashboard.png", alt: "MediVerse dark hospital dashboard with role-aware navigation and a message that hospital data is unavailable because the backend is unavailable in this environment." },
+      { src: "project-images/mediverse-patient-portal.png", alt: "MediVerse patient portal account registration form with patient verification details." }
+    ]
+  },
+  {
     id: "namma-raksha",
     title: "Namma Raksha — Smart Ambulance Dispatch System",
     categoryLabel: "AI & HEALTHCARE TECHNOLOGY",
